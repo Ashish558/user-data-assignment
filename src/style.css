@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  background: none;
+  font-family: Poppins;
+}
+
+a:hover, a:active, a:focus{
+  color: #5566bc;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+
+body {
+  font-family: Poppins;
+}
