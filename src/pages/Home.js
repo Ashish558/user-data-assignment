@@ -9,23 +9,32 @@ export default function Home() {
 
 
     return (
-        <Grid container sx={{ minHeight: '80vh', px: { lg: 1 }, pt: { lg: 7 } }} >
+        <Grid container sx={{
+             minHeight: '80vh', px: { lg: 1 }, pt: { lg: 7 }, justifyContent: 'center'
+              }} >
             <Grid item xs={12} lg={6}
-                sx={{
-                    px: { lg: 3 },
-                    minHeight: '500px'
-                }} >
+                sx={styles.gridItem} >
                 <Header text='Users' />
                 <Users />
             </Grid>
             <Grid item xs={12} lg={6}
                 sx={{
-                    px: { lg: 3 },
-                    display: {xs: 'none', lg: 'block'}
+                    ...styles.gridItem,
+                    display: { xs: 'none', lg: 'block' }
                 }}>
-                    <UserDetails />
-                    <UserModal />
+                <UserDetails />
+                <UserModal />
             </Grid>
         </Grid>
     )
 }
+
+const styles ={
+    gridItem: {
+        px: { lg: 3 },
+        minHeight: '500px',
+        width: { lg: '500px' },
+        maxWidth: { lg: '500px' }
+    }
+}
+
